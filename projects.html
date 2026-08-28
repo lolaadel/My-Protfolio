@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+
+<html data-theme="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Projects | Ola Adel</title>
+    <link rel="icon" href="assets/img/logo.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <style>
+        /* Project galleries */
+        .carousel-item img {
+            max-height: 72vh;
+            object-fit: contain;
+            background: #111;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container container-narrow">
+            <a class="navbar-brand brand" href="index.html">
+                <div class="premium-frame">
+                    <img src="assets/img/logo.jpg" alt="logo">
+                </div>
+                <div class="name">
+                    <span>Ola Adel</span>
+                    <small data-i18n="hero_badge">Front-End Developer</small>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" data-page="index.html" href="index.html"
+                            data-i18n="nav_home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" data-page="about.html" href="about.html"
+                            data-i18n="nav_about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" data-page="skills.html" href="skills.html"
+                            data-i18n="nav_skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" data-page="projects" href="projects.html"
+                            data-i18n="nav_projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" data-page="education.html" href="education.html"
+                            data-i18n="nav_education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" data-page="contact.html" href="contact.html"
+                            data-i18n="nav_contact">Contact</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-2 ms-lg-3 mt-3 mt-lg-0 nav-actions">
+                    <button class="btn btn-nav btn-sm" id="langBtn" data-action="toggle-lang" type="button">AR</button>
+                    <button class="btn btn-nav btn-sm" id="themeBtn" data-action="toggle-theme"
+                        type="button">Light</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="section">
+            <div class="d-flex align-items-end justify-content-between flex-wrap gap-3 mb-3">
+                <div>
+                    <h1 class="section-title reveal" data-i18n="projects_title">Projects</h1>
+                    <p class="reveal" data-i18n="projects_sub" style="color:var(--muted);max-width:58ch">A selection of
+                        my recent work. Each project has a dedicated details page.</p>
+                </div>
+            </div>
+            <div class="row g-4 mt-1">
+                <!-- ================= E-COMMERCE ================= -->
+                <div class="col-12 col-lg-8 reveal">
+                    <div class="project-card featured-project">
+                        <img alt="E-Commerce Website" class="project-thumb"
+                            src="assets/img/projects/ecommerce/01-home.png" />
+                        <div class="project-body">
+                            <span class="project-label">Featured Project</span>
+                            <h5>E-Commerce Website</h5>
+                            <p>
+                                A complete responsive e-commerce website that provides
+                                a smooth shopping experience with dynamic products,
+                                categories, search, filtering, pagination and cart functionality.
+                            </p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>Bootstrap</span>
+                                <span>JavaScript</span>
+                                <span>REST API</span>
+                            </div>
+                            <div class="d-flex gap-2 flex-wrap">
+                                <button class="btn btn-nav btn-sm" data-bs-target="#gallery-ecommerce"
+                                    data-bs-toggle="modal" type="button">
+                                    Gallery
+                                </button>
+                                <a class="btn btn-nav btn-sm" href="project-ecommerce.html">
+                                    View Details
+                                </a>
+                                <a class="btn btn-nav btn-sm" href="https://lolaadel.github.io/E-commerce-Project/"
+                                    target="_blank">
+                                    Live Preview
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= MOVIES API ================= -->
+                <div class="col-12 col-lg-4 reveal">
+                    <div class="project-card">
+
+                        <img alt="Movies API" class="project-thumb" src="assets/img/projects/movies/01-grid.png" />
+
+                        <div class="project-body">
+
+                            <h5 data-i18n="project_movies">Title</h5>
+
+                            <p data-i18n="project_movies_desc">Desc</p>
+
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>API</span>
+                            </div>
+
+                            <div class="d-flex gap-2 flex-wrap">
+
+                                <button class="btn btn-nav btn-sm" data-bs-target="#gallery-movies"
+                                    data-bs-toggle="modal" type="button">
+                                    <span data-i18n="project_btn_gallery">
+                                        Gallery
+                                    </span>
+                                </button>
+
+                                <a class="btn btn-nav btn-sm" href="project-movies.html">
+                                    <span data-i18n="project_btn_details">
+                                        View Details
+                                    </span>
+                                </a>
+
+                                <a class="btn btn-nav btn-sm" href="https://lolaadel.github.io/Movies-API-App/"
+                                    target="_blank">
+                                    <span data-i18n="project_btn_live">
+                                        Live Preview
+                                    </span>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= LAMMA ================= -->
+                <div class="col-12 col-lg-6 reveal">
+                    <div class="project-card">
+
+                        <img alt="Lamma Marketing Website" class="project-thumb"
+                            src="assets/img/projects/lamma/01-home.png" />
+
+                        <div class="project-body">
+
+                            <h5>Lamma Marketing Website</h5>
+
+                            <p>
+                                A modern and responsive marketing website designed
+                                with a clean, professional and engaging interface.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>Bootstrap</span>
+                                <span>JavaScript</span>
+                            </div>
+
+                            <div class="d-flex gap-2 flex-wrap">
+
+                                <button class="btn btn-nav btn-sm" data-bs-target="#gallery-lamma"
+                                    data-bs-toggle="modal" type="button">
+                                    Gallery
+                                </button>
+
+                                <a class="btn btn-nav btn-sm" href="project-lamma.html">
+                                    View Details
+                                </a>
+
+                                <a class="btn btn-nav btn-sm" href="https://lolaadel.github.io/Lamma-Marketing-Site/"
+                                    target="_blank">
+                                    Live Preview
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= ISTUDIO ================= -->
+                <div class="col-12 col-lg-6 reveal">
+                    <div class="project-card">
+
+                        <img alt="iStudio Website" class="project-thumb"
+                            src="assets/img/projects/istudio/01-home.png" />
+
+                        <div class="project-body">
+
+                            <h5>iStudio</h5>
+
+                            <p>
+                                A responsive website built with HTML, CSS and Bootstrap,
+                                focusing on clean layout, responsive design and modern UI.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>Bootstrap</span>
+                            </div>
+
+                            <div class="d-flex gap-2 flex-wrap">
+
+                                <button class="btn btn-nav btn-sm" data-bs-target="#gallery-istudio"
+                                    data-bs-toggle="modal" type="button">
+                                    Gallery
+                                </button>
+
+                                <a class="btn btn-nav btn-sm" href="project-istudio.html">
+                                    View Details
+                                </a>
+
+                                <a class="btn btn-nav btn-sm" href="https://lolaadel.github.io/iSUTDIO/"
+                                    target="_blank">
+                                    Live Preview
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- ================= FREELANCE LANDING PAGES ================= -->
+                <div class="col-12 col-lg-7 reveal">
+                    <div class="project-card">
+
+                        <img alt="Freelance Landing Pages" class="project-thumb"
+                            src="assets/img/projects/landing-pages/landing-1.png" />
+
+                        <div class="project-body">
+
+                            <h5>Freelance Landing Pages</h5>
+
+                            <p>
+                                A collection of three simple and responsive landing pages
+                                created for real freelance projects using clean HTML and CSS.
+                            </p>
+
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>Responsive Design</span>
+                            </div>
+
+                            <div class="d-flex gap-2 flex-wrap">
+
+                                <button class="btn btn-nav btn-sm" data-bs-target="#gallery-landing"
+                                    data-bs-toggle="modal" type="button">
+                                    Gallery
+                                </button>
+
+                                <a class="btn btn-nav btn-sm" href="project-landing-pages.html">
+                                    View Details
+                                </a>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- ================= WEATHER ================= -->
+                <div class="col-12 col-md-6 col-lg-5 reveal">
+                    <div class="project-card">
+
+                        <img alt="Weather App" class="project-thumb" src="assets/img/projects/weather/01-hero.png" />
+
+                        <div class="project-body">
+
+                            <h5 data-i18n="project_weather">Title</h5>
+
+                            <p data-i18n="project_weather_desc">Desc</p>
+
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>API</span>
+                            </div>
+
+                            <div class="d-flex gap-2 flex-wrap">
+
+                                <button class="btn btn-nav btn-sm" data-bs-target="#gallery-weather"
+                                    data-bs-toggle="modal" type="button">
+                                    <span data-i18n="project_btn_gallery">
+                                        Gallery
+                                    </span>
+                                </button>
+
+                                <a class="btn btn-nav btn-sm" href="project-weather.html">
+                                    <span data-i18n="project_btn_details">
+                                        View Details
+                                    </span>
+                                </a>
+
+                                <a class="btn btn-nav btn-sm" href="https://lolaadel.github.io/weather-website-project/"
+                                    target="_blank">
+                                    <span data-i18n="project_btn_live">
+                                        Live Preview
+                                    </span>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- ================= PRODUCT MANAGER ================= -->
+                <div class="col-12 col-md-6 col-lg-5 reveal">
+                    <div class="project-card">
+
+                        <img alt="Product Manager" class="project-thumb"
+                            src="assets/img/projects/products/01-main.png" />
+
+                        <div class="project-body">
+
+                            <h5 data-i18n="project_products">Title</h5>
+
+                            <p data-i18n="project_products_desc">Desc</p>
+
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                                <span>CRUD</span>
+                            </div>
+
+                            <div class="d-flex gap-2 flex-wrap">
+
+                                <button class="btn btn-nav btn-sm" data-bs-target="#gallery-products"
+                                    data-bs-toggle="modal" type="button">
+                                    <span data-i18n="project_btn_gallery">
+                                        Gallery
+                                    </span>
+                                </button>
+
+                                <a class="btn btn-nav btn-sm" href="project-products.html">
+                                    <span data-i18n="project_btn_details">
+                                        View Details
+                                    </span>
+                                </a>
+
+                                <a class="btn btn-nav btn-sm" href="https://lolaadel.github.io/Proudect-Project/"
+                                    target="_blank">
+                                    <span data-i18n="project_btn_live">
+                                        Live Preview
+                                    </span>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- ================= TO DO ================= -->
+                <div class="col-12 col-md-6 col-lg-5 reveal">
+                    <div class="project-card">
+
+                        <img alt="To Do App" class="project-thumb" src="assets/img/projects/todo/01-main.png" />
+
+                        <div class="project-body">
+
+                            <h5 data-i18n="project_todo">Title</h5>
+
+                            <p data-i18n="project_todo_desc">Desc</p>
+
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+
+                            <div class="d-flex gap-2 flex-wrap">
+
+                                <button class="btn btn-nav btn-sm" data-bs-target="#gallery-todo" data-bs-toggle="modal"
+                                    type="button">
+                                    <span data-i18n="project_btn_gallery">
+                                        Gallery
+                                    </span>
+                                </button>
+
+                                <a class="btn btn-nav btn-sm" href="project-todo.html">
+                                    <span data-i18n="project_btn_details">
+                                        View Details
+                                    </span>
+                                </a>
+
+                                <a class="btn btn-nav btn-sm" href="https://lolaadel.github.io/To-Do-Task-Project/"
+                                    target="_blank">
+                                    <span data-i18n="project_btn_live">
+                                        Live Preview
+                                    </span>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- ================= E-COMMERCE GALLERY ================= -->
+            <div aria-hidden="true" class="modal fade" id="gallery-ecommerce" tabindex="-1">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content bg-dark text-light">
+                        <div class="modal-header border-secondary">
+                            <h5 class="modal-title">E-Commerce Website</h5>
+                            <button aria-label="Close" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                type="button">
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="carousel slide" data-bs-ride="carousel" id="gallery-ecommerce-carousel">
+                                <!-- Indicators -->
+                                <div class="carousel-indicators">
+                                    <button class="active" data-bs-slide-to="0"
+                                        data-bs-target="#gallery-ecommerce-carousel" type="button">
+                                    </button>
+                                    <button data-bs-slide-to="1" data-bs-target="#gallery-ecommerce-carousel"
+                                        type="button">
+                                    </button>
+                                    <button data-bs-slide-to="2" data-bs-target="#gallery-ecommerce-carousel"
+                                        type="button">
+                                    </button>
+                                    <button data-bs-slide-to="3" data-bs-target="#gallery-ecommerce-carousel"
+                                        type="button">
+                                    </button>
+                                    <button data-bs-slide-to="4" data-bs-target="#gallery-ecommerce-carousel"
+                                        type="button">
+                                    </button>
+                                    <button data-bs-slide-to="5" data-bs-target="#gallery-ecommerce-carousel"
+                                        type="button">
+                                    </button>
+                                    <button data-bs-slide-to="6" data-bs-target="#gallery-ecommerce-carousel"
+                                        type="button">
+                                    </button>
+                                    <button data-bs-slide-to="7" data-bs-target="#gallery-ecommerce-carousel"
+                                        type="button">
+                                    </button>
+                                    <button data-bs-slide-to="8" data-bs-target="#gallery-ecommerce-carousel"
+                                        type="button">
+                                    </button>
+                                    <button data-bs-slide-to="9" data-bs-target="#gallery-ecommerce-carousel"
+                                        type="button">
+                                    </button>
+                                    <button data-bs-slide-to="10" data-bs-target="#gallery-ecommerce-carousel"
+                                        type="button">
+                                    </button>
+                                    <button data-bs-slide-to="11" data-bs-target="#gallery-ecommerce-carousel"
+                                        type="button">
+                                    </button>
+                                    <button data-bs-slide-to="12" data-bs-target="#gallery-ecommerce-carousel"
+                                        type="button">
+                                    </button>
+                                    <button data-bs-slide-to="13" data-bs-target="#gallery-ecommerce-carousel"
+                                        type="button">
+                                    </button>
+                                    <button data-bs-slide-to="14" data-bs-target="#gallery-ecommerce-carousel"
+                                        type="button">
+                                    </button>
+                                    <button data-bs-slide-to="15" data-bs-target="#gallery-ecommerce-carousel"
+                                        type="button">
+                                    </button>
+                                    <button data-bs-slide-to="16" data-bs-target="#gallery-ecommerce-carousel"
+                                        type="button">
+                                    </button>
+                                    <button data-bs-slide-to="17" data-bs-target="#gallery-ecommerce-carousel"
+                                        type="button">
+                                    </button>
+                                </div>
+                                <!-- Images -->
+                                <div class="carousel-inner rounded-4 overflow-hidden">
+                                    <div class="carousel-item active">
+                                        <img src="assets/img/projects/ecommerce/01-home.png" alt="E-Commerce Project 1"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/ecommerce/01.png" alt="E-Commerce Project 2"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/ecommerce/02.png" alt="E-Commerce Project 3"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/ecommerce/03.png" alt="E-Commerce Project 4"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/ecommerce/04.png" alt="E-Commerce Project 5"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/ecommerce/05.png" alt="E-Commerce Project 6"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/ecommerce/06.png" alt="E-Commerce Project 7"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/ecommerce/07.png" alt="E-Commerce Project 8"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/ecommerce/08.png" alt="E-Commerce Project 9"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/ecommerce/09.png" alt="E-Commerce Project 10"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/ecommerce/10.png" alt="E-Commerce Project 11"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/ecommerce/11.png" alt="E-Commerce Project 12"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/ecommerce/12.png" alt="E-Commerce Project 13"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/ecommerce/13.png" alt="E-Commerce Project 14"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/ecommerce/14.png" alt="E-Commerce Project 15"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/ecommerce/15.png" alt="E-Commerce Project 16"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/ecommerce/16.png" alt="E-Commerce Project 17"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/ecommerce/17.png" alt="E-Commerce Project 18"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                </div>
+
+                                <!-- Controls -->
+                                <button class="carousel-control-prev" data-bs-slide="prev"
+                                    data-bs-target="#gallery-ecommerce-carousel" type="button">
+
+                                    <span aria-hidden="true" class="carousel-control-prev-icon">
+                                    </span>
+
+                                    <span class="visually-hidden">
+                                        Previous
+                                    </span>
+                                </button>
+
+                                <button class="carousel-control-next" data-bs-slide="next"
+                                    data-bs-target="#gallery-ecommerce-carousel" type="button">
+
+                                    <span aria-hidden="true" class="carousel-control-next-icon">
+                                    </span>
+
+                                    <span class="visually-hidden">
+                                        Next
+                                    </span>
+                                </button>
+
+                            </div>
+                        </div>
+
+                        <div class="modal-footer border-secondary">
+
+                            <button class="btn btn-outline-light" data-bs-dismiss="modal" type="button">
+                                Close
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- ================= LAMMA GALLERY ================= -->
+            <div aria-hidden="true" class="modal fade" id="gallery-lamma" tabindex="-1">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+
+                    <div class="modal-content bg-dark text-light">
+
+                        <div class="modal-header border-secondary">
+                            <h5 class="modal-title">Lamma Marketing Website</h5>
+
+                            <button aria-label="Close" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                type="button">
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+
+                            <div class="carousel slide" data-bs-ride="carousel" id="gallery-lamma-carousel">
+
+                                <div class="carousel-indicators">
+
+                                    <button class="active" data-bs-slide-to="0" data-bs-target="#gallery-lamma-carousel"
+                                        type="button">
+                                    </button>
+
+                                    <button data-bs-slide-to="1" data-bs-target="#gallery-lamma-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="2" data-bs-target="#gallery-lamma-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="3" data-bs-target="#gallery-lamma-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="4" data-bs-target="#gallery-lamma-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="5" data-bs-target="#gallery-lamma-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="6" data-bs-target="#gallery-lamma-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="7" data-bs-target="#gallery-lamma-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="8" data-bs-target="#gallery-lamma-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="9" data-bs-target="#gallery-lamma-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="10" data-bs-target="#gallery-lamma-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="11" data-bs-target="#gallery-lamma-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="12" data-bs-target="#gallery-lamma-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="13" data-bs-target="#gallery-lamma-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="14" data-bs-target="#gallery-lamma-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="15" data-bs-target="#gallery-lamma-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="16" data-bs-target="#gallery-lamma-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="17" data-bs-target="#gallery-lamma-carousel"
+                                        type="button"></button>
+
+                                </div>
+
+                                <div class="carousel-inner rounded-4 overflow-hidden">
+
+                                    <div class="carousel-item active">
+                                        <img src="assets/img/projects/lamma/01-home.png" alt="Lamma Project 1"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/lamma/02.png" alt="Lamma Project 2"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/lamma/03.png" alt="Lamma Project 3"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/lamma/04.png" alt="Lamma Project 4"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/lamma/05.png" alt="Lamma Project 5"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/lamma/06.png" alt="Lamma Project 6"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/lamma/07.png" alt="Lamma Project 7"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/lamma/08.png" alt="Lamma Project 8"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/lamma/09.png" alt="Lamma Project 9"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/lamma/10.png" alt="Lamma Project 10"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/lamma/11.png" alt="Lamma Project 11"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/lamma/12.png" alt="Lamma Project 12"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/lamma/13.png" alt="Lamma Project 13"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/lamma/14.png" alt="Lamma Project 14"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/lamma/15.png" alt="Lamma Project 15"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/lamma/16.png" alt="Lamma Project 16"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                </div>
+
+                                <button class="carousel-control-prev" data-bs-slide="prev"
+                                    data-bs-target="#gallery-lamma-carousel" type="button">
+
+                                    <span class="carousel-control-prev-icon"></span>
+                                    <span class="visually-hidden">Previous</span>
+
+                                </button>
+
+                                <button class="carousel-control-next" data-bs-slide="next"
+                                    data-bs-target="#gallery-lamma-carousel" type="button">
+
+                                    <span class="carousel-control-next-icon"></span>
+                                    <span class="visually-hidden">Next</span>
+
+                                </button>
+
+                            </div>
+                        </div>
+
+                        <div class="modal-footer border-secondary">
+
+                            <button class="btn btn-outline-light" data-bs-dismiss="modal" type="button">
+                                Close
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- ================= ISTUDIO GALLERY ================= -->
+            <div aria-hidden="true" class="modal fade" id="gallery-istudio" tabindex="-1">
+
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+
+                    <div class="modal-content bg-dark text-light">
+
+                        <div class="modal-header border-secondary">
+
+                            <h5 class="modal-title">
+                                iStudio
+                            </h5>
+
+                            <button aria-label="Close" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                type="button">
+                            </button>
+
+                        </div>
+
+                        <div class="modal-body">
+
+                            <div class="carousel slide" data-bs-ride="carousel" id="gallery-istudio-carousel">
+
+                                <div class="carousel-indicators">
+
+                                    <button class="active" data-bs-slide-to="0"
+                                        data-bs-target="#gallery-istudio-carousel" type="button">
+                                    </button>
+
+                                    <button data-bs-slide-to="1" data-bs-target="#gallery-istudio-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="2" data-bs-target="#gallery-istudio-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="3" data-bs-target="#gallery-istudio-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="4" data-bs-target="#gallery-istudio-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="5" data-bs-target="#gallery-istudio-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="6" data-bs-target="#gallery-istudio-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="7" data-bs-target="#gallery-istudio-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="8" data-bs-target="#gallery-istudio-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="9" data-bs-target="#gallery-istudio-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="10" data-bs-target="#gallery-istudio-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="11" data-bs-target="#gallery-istudio-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="12" data-bs-target="#gallery-istudio-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="13" data-bs-target="#gallery-istudio-carousel"
+                                        type="button"></button>
+
+                                </div>
+
+                                <div class="carousel-inner rounded-4 overflow-hidden">
+
+                                    <div class="carousel-item active">
+                                        <img src="assets/img/projects/istudio/01-home.png" alt="iStudio 1"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/istudio/02.png" alt="iStudio 2"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/istudio/03.png" alt="iStudio 3"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/istudio/04.png" alt="iStudio 4"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/istudio/05.png" alt="iStudio 5"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/istudio/06.png" alt="iStudio 6"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/istudio/07.png" alt="iStudio 7"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/istudio/08.png" alt="iStudio 8"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/istudio/09.png" alt="iStudio 9"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/istudio/10.png" alt="iStudio 10"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/istudio/11.png" alt="iStudio 11"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/istudio/12.png" alt="iStudio 12"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/istudio/13.png" alt="iStudio 13"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/istudio/14.png" alt="iStudio 14"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                </div>
+
+                                <button class="carousel-control-prev" data-bs-slide="prev"
+                                    data-bs-target="#gallery-istudio-carousel" type="button">
+
+                                    <span class="carousel-control-prev-icon"></span>
+                                    <span class="visually-hidden">Previous</span>
+
+                                </button>
+
+                                <button class="carousel-control-next" data-bs-slide="next"
+                                    data-bs-target="#gallery-istudio-carousel" type="button">
+
+                                    <span class="carousel-control-next-icon"></span>
+                                    <span class="visually-hidden">Next</span>
+
+                                </button>
+
+                            </div>
+                        </div>
+
+                        <div class="modal-footer border-secondary">
+
+                            <button class="btn btn-outline-light" data-bs-dismiss="modal" type="button">
+                                Close
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- ================= LANDING PAGES GALLERY ================= -->
+            <div aria-hidden="true" class="modal fade" id="gallery-landing" tabindex="-1">
+
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+
+                    <div class="modal-content bg-dark text-light">
+
+                        <div class="modal-header border-secondary">
+
+                            <h5 class="modal-title">
+                                Freelance Landing Pages
+                            </h5>
+
+                            <button aria-label="Close" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                type="button">
+                            </button>
+
+                        </div>
+
+                        <div class="modal-body">
+
+                            <div class="carousel slide" data-bs-ride="carousel" id="gallery-landing-carousel">
+
+                                <div class="carousel-indicators">
+
+                                    <button class="active" data-bs-slide-to="0"
+                                        data-bs-target="#gallery-landing-carousel" type="button">
+                                    </button>
+
+                                    <button data-bs-slide-to="1" data-bs-target="#gallery-landing-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="2" data-bs-target="#gallery-landing-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="3" data-bs-target="#gallery-landing-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="4" data-bs-target="#gallery-landing-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="5" data-bs-target="#gallery-landing-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="6" data-bs-target="#gallery-landing-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="7" data-bs-target="#gallery-landing-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="8" data-bs-target="#gallery-landing-carousel"
+                                        type="button"></button>
+                                    <button data-bs-slide-to="9" data-bs-target="#gallery-landing-carousel"
+                                        type="button"></button>
+
+                                </div>
+
+                                <div class="carousel-inner rounded-4 overflow-hidden">
+
+                                    <!-- Landing Page 1 -->
+                                    <div class="carousel-item active">
+                                        <img src="assets/img/projects/landing-pages/landing-1.png" alt="Landing Page 1"
+                                            class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <!-- Landing Page 2 -->
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/landing-pages/landing-2-1.png"
+                                            alt="Landing Page 2 - Image 1" class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/landing-pages/landing-2-2.png"
+                                            alt="Landing Page 2 - Image 2" class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/landing-pages/landing-2-3.png"
+                                            alt="Landing Page 2 - Image 3" class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/landing-pages/landing-2-4.png"
+                                            alt="Landing Page 2 - Image 4" class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <!-- Landing Page 3 -->
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/landing-pages/landing-3-1.png"
+                                            alt="Landing Page 3 - Image 1" class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/landing-pages/landing-3-2.png"
+                                            alt="Landing Page 3 - Image 2" class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/landing-pages/landing-3-3.png"
+                                            alt="Landing Page 3 - Image 3" class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/landing-pages/landing-3-4.png"
+                                            alt="Landing Page 3 - Image 4" class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                    <div class="carousel-item">
+                                        <img src="assets/img/projects/landing-pages/landing-3-5.png"
+                                            alt="Landing Page 3 - Image 5" class="d-block w-100" loading="lazy">
+                                    </div>
+
+                                </div>
+
+                                <button class="carousel-control-prev" data-bs-slide="prev"
+                                    data-bs-target="#gallery-landing-carousel" type="button">
+
+                                    <span class="carousel-control-prev-icon"></span>
+                                    <span class="visually-hidden">Previous</span>
+
+                                </button>
+
+                                <button class="carousel-control-next" data-bs-slide="next"
+                                    data-bs-target="#gallery-landing-carousel" type="button">
+
+                                    <span class="carousel-control-next-icon"></span>
+                                    <span class="visually-hidden">Next</span>
+
+                                </button>
+
+                            </div>
+                        </div>
+
+                        <div class="modal-footer border-secondary">
+
+                            <button class="btn btn-outline-light" data-bs-dismiss="modal" type="button">
+                                Close
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= movies GALLERY ================= -->
+            <div aria-hidden="true" class="modal fade" id="gallery-movies" tabindex="-1">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content bg-dark text-light">
+                        <div class="modal-header border-secondary">
+                            <h5 class="modal-title"><span data-i18n="project_movies">Gallery</span></h5><button
+                                aria-label="Close" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                type="button"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="carousel slide" data-bs-ride="carousel" id="gallery-movies-carousel">
+                                <div class="carousel-indicators"><button aria-current="true" aria-label="Slide 1"
+                                        class="active" data-bs-slide-to="0" data-bs-target="#gallery-movies-carousel"
+                                        type="button"></button><button aria-label="Slide 2" data-bs-slide-to="1"
+                                        data-bs-target="#gallery-movies-carousel" type="button"></button><button
+                                        aria-label="Slide 3" data-bs-slide-to="2"
+                                        data-bs-target="#gallery-movies-carousel" type="button"></button><button
+                                        aria-label="Slide 4" data-bs-slide-to="3"
+                                        data-bs-target="#gallery-movies-carousel" type="button"></button><button
+                                        aria-label="Slide 5" data-bs-slide-to="4"
+                                        data-bs-target="#gallery-movies-carousel" type="button"></button></div>
+                                <div class="carousel-inner rounded-4 overflow-hidden">
+                                    <div class="carousel-item active"><img alt="Movies - grid" class="d-block w-100"
+                                            loading="lazy" src="assets/img/projects/movies/01-grid.png" /></div>
+                                    <div class="carousel-item"><img alt="Movies - search" class="d-block w-100"
+                                            loading="lazy" src="assets/img/projects/movies/02-search.png" /></div>
+                                    <div class="carousel-item"><img alt="Movies - details" class="d-block w-100"
+                                            loading="lazy" src="assets/img/projects/movies/03-details.png" /></div>
+                                    <div class="carousel-item"><img alt="Movies - sidebar" class="d-block w-100"
+                                            loading="lazy" src="assets/img/projects/movies/04-sidebar.png" /></div>
+                                    <div class="carousel-item"><img alt="Movies - contact" class="d-block w-100"
+                                            loading="lazy" src="assets/img/projects/movies/05-contact.png" /></div>
+                                </div><button class="carousel-control-prev" data-bs-slide="prev"
+                                    data-bs-target="#gallery-movies-carousel" type="button"><span aria-hidden="true"
+                                        class="carousel-control-prev-icon"></span><span
+                                        class="visually-hidden">Previous</span></button><button
+                                    class="carousel-control-next" data-bs-slide="next"
+                                    data-bs-target="#gallery-movies-carousel" type="button"><span aria-hidden="true"
+                                        class="carousel-control-next-icon"></span><span
+                                        class="visually-hidden">Next</span></button>
+                            </div>
+                        </div>
+                        <div class="modal-footer border-secondary"><button class="btn btn-outline-light"
+                                data-bs-dismiss="modal" type="button"><span data-i18n="btn_close">Close</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= weather GALLERY ================= -->
+            <div aria-hidden="true" class="modal fade" id="gallery-weather" tabindex="-1">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content bg-dark text-light">
+                        <div class="modal-header border-secondary">
+                            <h5 class="modal-title"><span data-i18n="project_weather">Gallery</span></h5><button
+                                aria-label="Close" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                type="button"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="carousel slide" data-bs-ride="carousel" id="gallery-weather-carousel">
+                                <div class="carousel-indicators"><button aria-current="true" aria-label="Slide 1"
+                                        class="active" data-bs-slide-to="0" data-bs-target="#gallery-weather-carousel"
+                                        type="button"></button><button aria-label="Slide 2" data-bs-slide-to="1"
+                                        data-bs-target="#gallery-weather-carousel" type="button"></button></div>
+                                <div class="carousel-inner rounded-4 overflow-hidden">
+                                    <div class="carousel-item active"><img alt="Weather - desktop" class="d-block w-100"
+                                            loading="lazy" src="assets/img/projects/weather/01-hero.png" /></div>
+                                    <div class="carousel-item"><img alt="Weather - mobile" class="d-block w-100"
+                                            loading="lazy" src="assets/img/projects/weather/02-mobile.png" /></div>
+                                </div><button class="carousel-control-prev" data-bs-slide="prev"
+                                    data-bs-target="#gallery-weather-carousel" type="button"><span aria-hidden="true"
+                                        class="carousel-control-prev-icon"></span><span
+                                        class="visually-hidden">Previous</span></button><button
+                                    class="carousel-control-next" data-bs-slide="next"
+                                    data-bs-target="#gallery-weather-carousel" type="button"><span aria-hidden="true"
+                                        class="carousel-control-next-icon"></span><span
+                                        class="visually-hidden">Next</span></button>
+                            </div>
+                        </div>
+                        <div class="modal-footer border-secondary"><button class="btn btn-outline-light"
+                                data-bs-dismiss="modal" type="button"><span data-i18n="btn_close">Close</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= todo GALLERY ================= -->
+            <div aria-hidden="true" class="modal fade" id="gallery-todo" tabindex="-1">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content bg-dark text-light">
+                        <div class="modal-header border-secondary">
+                            <h5 class="modal-title"><span data-i18n="project_todo">Gallery</span></h5><button
+                                aria-label="Close" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                type="button"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="carousel slide" data-bs-ride="carousel" id="gallery-todo-carousel">
+                                <div class="carousel-indicators"><button aria-current="true" aria-label="Slide 1"
+                                        class="active" data-bs-slide-to="0" data-bs-target="#gallery-todo-carousel"
+                                        type="button"></button></div>
+                                <div class="carousel-inner rounded-4 overflow-hidden">
+                                    <div class="carousel-item active"><img alt="Todo" class="d-block w-100"
+                                            loading="lazy" src="assets/img/projects/todo/01-main.png" /></div>
+                                </div><button class="carousel-control-prev" data-bs-slide="prev"
+                                    data-bs-target="#gallery-todo-carousel" type="button"><span aria-hidden="true"
+                                        class="carousel-control-prev-icon"></span><span
+                                        class="visually-hidden">Previous</span></button><button
+                                    class="carousel-control-next" data-bs-slide="next"
+                                    data-bs-target="#gallery-todo-carousel" type="button"><span aria-hidden="true"
+                                        class="carousel-control-next-icon"></span><span
+                                        class="visually-hidden">Next</span></button>
+                            </div>
+                        </div>
+                        <div class="modal-footer border-secondary"><button class="btn btn-outline-light"
+                                data-bs-dismiss="modal" type="button"><span data-i18n="btn_close">Close</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ================= products GALLERY ================= -->
+
+            <div aria-hidden="true" class="modal fade" id="gallery-products" tabindex="-1">
+                <div class="modal-dialog modal-xl modal-dialog-centered">
+                    <div class="modal-content bg-dark text-light">
+                        <div class="modal-header border-secondary">
+                            <h5 class="modal-title"><span data-i18n="project_products">Gallery</span></h5><button
+                                aria-label="Close" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                type="button"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="carousel slide" data-bs-ride="carousel" id="gallery-products-carousel">
+                                <div class="carousel-indicators"><button aria-current="true" aria-label="Slide 1"
+                                        class="active" data-bs-slide-to="0" data-bs-target="#gallery-products-carousel"
+                                        type="button"></button><button aria-label="Slide 2" data-bs-slide-to="1"
+                                        data-bs-target="#gallery-products-carousel" type="button"></button><button
+                                        aria-label="Slide 3" data-bs-slide-to="2"
+                                        data-bs-target="#gallery-products-carousel" type="button"></button><button
+                                        aria-label="Slide 4" data-bs-slide-to="3"
+                                        data-bs-target="#gallery-products-carousel" type="button"></button></div>
+                                <div class="carousel-inner rounded-4 overflow-hidden">
+                                    <div class="carousel-item active"><img alt="Products - form" class="d-block w-100"
+                                            loading="lazy" src="assets/img/projects/products/01-main.png" /></div>
+                                    <div class="carousel-item"><img alt="Products - list" class="d-block w-100"
+                                            loading="lazy" src="assets/img/projects/products/02-list.png" /></div>
+                                    <div class="carousel-item"><img alt="Products - search" class="d-block w-100"
+                                            loading="lazy" src="assets/img/projects/products/03-search.png" /></div>
+                                    <div class="carousel-item"><img alt="Products - update" class="d-block w-100"
+                                            loading="lazy" src="assets/img/projects/products/04-update.png" /></div>
+                                </div><button class="carousel-control-prev" data-bs-slide="prev"
+                                    data-bs-target="#gallery-products-carousel" type="button"><span aria-hidden="true"
+                                        class="carousel-control-prev-icon"></span><span
+                                        class="visually-hidden">Previous</span></button><button
+                                    class="carousel-control-next" data-bs-slide="next"
+                                    data-bs-target="#gallery-products-carousel" type="button"><span aria-hidden="true"
+                                        class="carousel-control-next-icon"></span><span
+                                        class="visually-hidden">Next</span></button>
+                            </div>
+                        </div>
+                        <div class="modal-footer border-secondary"><button class="btn btn-outline-light"
+                                data-bs-dismiss="modal" type="button"><span data-i18n="btn_close">Close</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container container-narrow">
+            <div class="row align-items-center g-3">
+                <div class="col-md-6">
+                    <div class="footer-icons">
+                        <a aria-label="LinkedIn" href="https://www.linkedin.com/in/olaadel55" target="_blank"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a aria-label="GitHub" href="https://github.com/lolaadel" target="_blank"><i
+                                class="fa-brands fa-github"></i></a>
+                        <a aria-label="Facebook" href="https://www.facebook.com/share/1CRuUR7CFk/" target="_blank"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a aria-label="Email" href="mailto:olaadel552005@gmail.com"><i
+                                class="fa-solid fa-envelope"></i></a>
+                        <a aria-label="Phone" href="tel:+201001948900"><i class="fa-solid fa-phone"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="small" style="color:var(--muted);">
+                        © <span id="y"></span> Ola Adel. <span data-i18n="footer_rights">All rights reserved.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a aria-label="Back to top" class="back-to-top" href="#"><i class="fa-solid fa-arrow-up"></i></a>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

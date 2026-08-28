@@ -1,0 +1,420 @@
+/* Portfolio main JS (offline-friendly) */
+
+const I18N = {
+  "en": {
+    "nav_home": "Home",
+    "nav_about": "About",
+    "nav_skills": "Skills",
+    "nav_projects": "Projects",
+    "nav_education": "Education",
+    "nav_contact": "Contact",
+    "hero_badge": "Front-End Developer",
+    "hero_title": "Ola Adel",
+    "hero_sub": "I build modern, responsive and interactive web experiences using HTML, CSS, Bootstrap and JavaScript.",
+    "hero_cta_projects": "View Projects",
+    "hero_cta_contact": "Contact",
+    "what_i_do_title": "What I Do",
+    "what_i_do_sub": "I build modern, responsive front-end interfaces with attention to detail and user experience.",
+    "service_ui": "UI Development",
+    "service_ui_desc": "Build clean and organized interfaces using HTML, CSS, Bootstrap, and JavaScript.",
+    "service_responsive": "Responsive Design",
+    "service_responsive_desc": "Create interfaces that work smoothly across different screen sizes and devices.",
+    "service_api": "API Integration",
+    "service_api_desc": "Work with real APIs using Fetch and Async/Await to build interactive web experiences.",
+    "service_clean": "Clean Code",
+    "service_clean_desc": "Write clear, organized, and maintainable code with attention to UI details.",
+    "selected_projects_title": "Selected Projects",
+    "selected_projects_sub": "A quick look at some of my work. Explore all projects for details and screenshots.",
+    "view_all_projects": "View All Projects",
+    "quick_title": "Quick Highlights",
+    "quick_1_t": "APIs",
+    "quick_1_d": "Integrate real APIs using Fetch, Async/Await, and error handling.",
+    "quick_2_t": "CRUD + LocalStorage",
+    "quick_2_d": "Create, update, delete, search, and persist data locally.",
+    "quick_3_t": "Responsive UI",
+    "quick_3_d": "Use Bootstrap Grid and custom CSS to build responsive interfaces for all screen sizes.",
+    "about_title": "About Me",
+    "about_p1": "I am a Front-End Developer focused on building modern, responsive, and user-friendly web interfaces using HTML, CSS, Bootstrap, and JavaScript.",
+    "about_p2": "I enjoy turning ideas and designs into clean, interactive websites. I have hands-on experience working with APIs, Fetch, Async/Await, CRUD operations, LocalStorage, search, filtering, and responsive layouts.",
+    "about_points_title": "What Makes Me Stand Out",
+    "about_point_1": "Strong attention to detail and clean, organized interfaces.",
+    "about_point_2": "Practical experience through a variety of Front-End projects.",
+    "about_point_3": "Passion for continuous learning and improving my skills through practice.",
+    "skills_title": "Skills",
+    "projects_title": "Projects",
+    "projects_sub": "A selection of my recent work. Each project has a dedicated details page.",
+    "project_movies": "Movies API App",
+    "project_movies_desc": "Search and explore movies using a real API, with categories, details view, and responsive layout.",
+    "project_weather": "Weather App",
+    "project_weather_desc": "Get current weather and forecast for any city using a real weather API. Responsive dark UI.",
+    "project_todo": "To-Do App",
+    "project_todo_desc": "Task management with add/complete/delete and counters. Clean UI and fast interactions.",
+    "project_products": "Product Manager (CRUD)",
+    "project_products_desc": "Add, update, delete and search products with data persistence using LocalStorage.",
+    "project_template": "Nova Portfolio Website",
+    "project_template_desc": "A responsive multi-section portfolio website with navbar, services, portfolio, testimonials, and contact.",
+    "project_btn_details": "View Details",
+    "project_btn_live": "Live Preview",
+    "project_btn_gallery": "Gallery",
+    "education_title": "Education",
+    "edu_title": "Academic Education",
+    "edu_1_school": "Higher Institute for Computers and Information Systems in Tanta",
+    "edu_1_degree": "Business Information Systems (BIS)",
+    "edu_1_year": "Graduation: 2027",
+    "courses_title": "Courses & Training",
+    "view_certificate": "View Certificate",
+    "course_1_title": "Web Designer – NTI",
+    "course_1_desc": "National Telecommunications Institute",
+    "course_1_hours": "120 Hours",
+    "course_1_grade": "Grade: 98%",
+    "course_2_title": "ICDL",
+    "course_2_desc": "International Computer Driving License",
+    "course_3_title": "Build with AI – MASR Edition",
+    "course_3_desc": "Under the sponsorship of Google & ITI",
+    "course_4_title": "Using Artificial Intelligence in Freelance Work",
+    "course_4_desc": "Under the sponsorship of the Ministry of Communications and Information Technology",
+    "course_5_title": "English Course",
+    "course_6_title": "Human Development",
+    "course_7_title": "Business & Entrepreneurship",
+    "course_8_title": "Marketing",
+    "contact_title": "Contact",
+    "contact_sub": "Have a project in mind or want to work together? Feel free to get in touch.",
+    "contact_info_title": "Contact Information",
+    "contact_email": "Email",
+    "contact_phone": "Phone",
+    "contact_location": "Location",
+    "location_value": "Egypt",
+    "download_cv": "Download CV",
+    "contact_form_title": "Let's Work Together",
+    "name_placeholder": "Your name",
+    "email_placeholder": "Your email",
+    "message_placeholder": "Your message",
+    "send_message": "Send Message",
+    "footer_rights": "All rights reserved.",
+    "btn_top": "Top",
+    "lang": "AR",
+    "theme": "Light",
+    "theme_light": "Light",
+    "theme_dark": "Dark",
+    "btn_close": "Close"
+  },
+  "ar": {
+    "nav_home": "الرئيسية",
+    "nav_about": "نبذة",
+    "nav_skills": "المهارات",
+    "nav_projects": "المشاريع",
+    "nav_education": "التعليم",
+    "nav_contact": "تواصل",
+    "hero_badge": "مطور واجهات أمامية",
+    "hero_title": "علا عادل",
+    "hero_sub": "أبني تجارب ويب حديثة ومتجاوبة وتفاعلية باستخدام HTML وCSS وBootstrap وJavaScript.",
+    "hero_cta_projects": "مشاهدة المشاريع",
+    "hero_cta_contact": "تواصل معي",
+    "what_i_do_title": "ماذا أقدّم",
+    "what_i_do_sub": "أبني واجهات أمامية حديثة ومتجاوبة مع الاهتمام بالتفاصيل وتجربة المستخدم.",
+    "service_ui": "تطوير الواجهات",
+    "service_ui_desc": "إنشاء واجهات نظيفة ومنظمة باستخدام HTML وCSS وBootstrap وJavaScript.",
+    "service_responsive": "تصميم متجاوب",
+    "service_responsive_desc": "تصميم واجهات تعمل بشكل جيد على مختلف أحجام الشاشات والأجهزة.",
+    "service_api": "ربط APIs",
+    "service_api_desc": "التعامل مع APIs الحقيقية باستخدام Fetch وAsync/Await وبناء واجهات تفاعلية.",
+    "service_clean": "كود منظم",
+    "service_clean_desc": "كتابة كود واضح ومنظم وسهل التعديل مع الاهتمام بتفاصيل الـUI.",
+    "selected_projects_title": "مشاريع مختارة",
+    "selected_projects_sub": "نظرة سريعة على بعض مشاريعي. يمكنك مشاهدة جميع المشاريع للاطلاع على التفاصيل والصور.",
+    "view_all_projects": "مشاهدة جميع المشاريع",
+    "quick_title": "ملخص سريع",
+    "quick_1_t": "APIs",
+    "quick_1_d": "ربط APIs حقيقية باستخدام Fetch وAsync/Await ومعالجة الأخطاء.",
+    "quick_2_t": "CRUD + LocalStorage",
+    "quick_2_d": "إضافة وتعديل وحذف وبحث مع حفظ البيانات محليًا.",
+    "quick_3_t": "تصميم متجاوب",
+    "quick_3_d": "استخدام Bootstrap Grid وCSS لبناء واجهات متجاوبة مع جميع الشاشات.",
+    "about_title": "نبذة عني",
+    "about_p1": "أنا مطورة واجهات أمامية (Front-End Developer) أركز على بناء واجهات ويب حديثة ومتجاوبة وسهلة الاستخدام باستخدام HTML وCSS وBootstrap وJavaScript.",
+    "about_p2": "أحب تحويل الأفكار والتصميمات إلى مواقع نظيفة وتفاعلية. لدي خبرة عملية في التعامل مع APIs وFetch وAsync/Await وعمليات CRUD وLocalStorage والبحث والفلاتر وتصميم الواجهات المتجاوبة.",
+    "about_points_title": "إيه اللي بيميزني",
+    "about_point_1": "اهتمام بالتفاصيل وبناء واجهات نظيفة ومنظمة.",
+    "about_point_2": "خبرة عملية من خلال تنفيذ مجموعة متنوعة من مشاريع الـFront-End.",
+    "about_point_3": "شغف بالتعلم المستمر وتطوير مهاراتي من خلال التطبيق العملي.",
+    "skills_title": "المهارات",
+    "projects_title": "المشاريع",
+    "projects_sub": "مجموعة من أحدث أعمالي. لكل مشروع صفحة تفاصيل خاصة.",
+    "project_movies": "تطبيق الأفلام (Movies API)",
+    "project_movies_desc": "بحث واستعراض أفلام باستخدام API حقيقية مع تصنيفات وصفحة تفاصيل وتصميم متجاوب.",
+    "project_weather": "تطبيق الطقس",
+    "project_weather_desc": "عرض الطقس الحالي وتوقعات الأيام لأي مدينة باستخدام API حقيقية. واجهة داكنة متجاوبة.",
+    "project_todo": "تطبيق المهام (To-Do)",
+    "project_todo_desc": "إدارة مهام تشمل الإضافة والإنهاء والحذف مع عدادات وتصميم بسيط وسريع.",
+    "project_products": "إدارة المنتجات (CRUD)",
+    "project_products_desc": "إضافة وتعديل وحذف وبحث مع حفظ البيانات باستخدام LocalStorage.",
+    "project_template": "موقع بورتفوليو نوفا",
+    "project_template_desc": "موقع بورتفوليو متجاوب متعدد الأقسام يشمل شريط التنقل والخدمات والأعمال والتقييمات والتواصل.",
+    "project_btn_details": "تفاصيل المشروع",
+    "project_btn_live": "عرض مباشر",
+    "project_btn_gallery": "الصور",
+    "education_title": "التعليم",
+    "edu_title": "التعليم الأكاديمي",
+    "edu_1_school": "المعهد العالي للحاسبات والمعلومات بطنطا",
+    "edu_1_degree": "نظم معلومات الأعمال (BIS)",
+    "edu_1_year": "سنة التخرج: 2027",
+    "courses_title": "الكورسات والتدريب",
+    "view_certificate": "عرض الشهادة",
+    "course_1_title": "Web Designer – NTI",
+    "course_1_desc": "المعهد القومي للاتصالات",
+    "course_1_hours": "120 ساعة",
+    "course_1_grade": "التقدير: 98%",
+    "course_2_title": "ICDL",
+    "course_2_desc": "الرخصة الدولية لقيادة الحاسب الآلي",
+    "course_3_title": "Build with AI – MASR Edition",
+    "course_3_desc": "تحت رعاية Google وITI",
+    "course_4_title": "استخدام الذكاء الاصطناعي في العمل المهني الحر",
+    "course_4_desc": "تحت رعاية وزارة الاتصالات وتكنولوجيا المعلومات",
+    "course_5_title": "دورة اللغة الإنجليزية",
+    "course_6_title": "التنمية البشرية",
+    "course_7_title": "Business & Entrepreneurship",
+    "course_8_title": "Marketing",
+    "contact_title": "تواصل معي",
+    "contact_sub": "هل لديك مشروع أو فكرة؟ يسعدني التواصل معك والعمل معًا.",
+    "contact_info_title": "معلومات التواصل",
+    "contact_email": "البريد الإلكتروني",
+    "contact_phone": "رقم الهاتف",
+    "contact_location": "الموقع",
+    "location_value": "مصر",
+    "download_cv": "تحميل السيرة الذاتية",
+    "contact_form_title": "لنعمل معًا",
+    "name_placeholder": "اسمك",
+    "email_placeholder": "بريدك الإلكتروني",
+    "message_placeholder": "رسالتك",
+    "send_message": "إرسال الرسالة",
+    "footer_rights": "جميع الحقوق محفوظة.",
+    "btn_top": "فوق",
+    "lang": "EN",
+    "theme": "Light",
+    "theme_light": "Light",
+    "theme_dark": "Dark",
+    "btn_close": "إغلاق"
+  }
+};
+
+(function () {
+  const $ = (sel, parent = document) => parent.querySelector(sel);
+  const $$ = (sel, parent = document) => Array.from(parent.querySelectorAll(sel));
+
+  // Theme
+  const THEME_KEY = 'oa_theme';
+  const LANG_KEY = 'oa_lang';
+
+  function setTheme(theme) {
+    const safe = theme === 'light' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', safe);
+    localStorage.setItem(THEME_KEY, safe);
+
+    const icon = $('#themeIcon');
+    if (icon) icon.textContent = safe === 'dark' ? '🌙' : '☀️';
+
+    // Requirement: theme button text toggles Light <-> Dark.
+    const dict = I18N[getLang()] || I18N.en;
+    const label = safe === 'dark'
+      ? (dict.theme_light || 'Light')
+      : (dict.theme_dark || 'Dark');
+
+    const themeBtnEl = $('#themeBtn') || $('#themeToggle');
+    if (themeBtnEl) themeBtnEl.textContent = label;
+  }
+
+  function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme') || 'dark';
+    setTheme(current === 'dark' ? 'light' : 'dark');
+  }
+
+  // Language
+  function getLang() {
+    return localStorage.getItem(LANG_KEY) || 'en';
+  }
+
+  function setLang(lang) {
+    localStorage.setItem(LANG_KEY, lang);
+    applyI18n(lang);
+    const btn = $('#langBtn') || $('#langToggle');
+    if (btn) btn.textContent = I18N[lang]?.lang || (lang === 'ar' ? 'EN' : 'AR');
+
+    // Keep theme label correct after changing language.
+    setTheme(localStorage.getItem(THEME_KEY) || 'light');
+
+    // dir switch
+    if (lang === 'ar') {
+      document.documentElement.setAttribute('dir', 'rtl');
+      document.documentElement.setAttribute('lang', 'ar');
+    } else {
+      document.documentElement.setAttribute('dir', 'ltr');
+      document.documentElement.setAttribute('lang', 'en');
+    }
+  }
+
+  function toggleLang() {
+    setLang(getLang() === 'en' ? 'ar' : 'en');
+  }
+
+  function applyI18n(lang) {
+    const dict = I18N[lang] || I18N.en;
+    $$('[data-i18n]').forEach((el) => {
+      const key = el.getAttribute('data-i18n');
+      if (key && dict[key] != null) el.textContent = dict[key];
+    });
+
+    // placeholders
+    $$('[data-i18n-placeholder]').forEach((el) => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      if (key && dict[key] != null) el.setAttribute('placeholder', dict[key]);
+    });
+  }
+
+  // Scroll reveal
+  function initReveal() {
+    // Only enable if IntersectionObserver exists
+    if (!('IntersectionObserver' in window)) return;
+
+    // Mark that reveal logic is active (CSS hides .reveal elements only when body has this class)
+    document.body.classList.add('js-reveal');
+
+    const targets = $$('.reveal');
+    if (!targets.length) return;
+
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add('show');
+            obs.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -10% 0px' }
+    );
+
+    targets.forEach((t) => obs.observe(t));
+  }
+
+  // Back to top
+  function initBackToTop() {
+    const btn = $('#backToTop');
+    if (!btn) return;
+
+    const onScroll = () => {
+      const y = window.scrollY || document.documentElement.scrollTop;
+      if (y > 420) btn.classList.add('show');
+      else btn.classList.remove('show');
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // Navbar improvements for mobile: close after click
+  function initNavbarAutoClose() {
+    const navCollapse = $('#navbarNav');
+    const toggler = $('.navbar-toggler');
+    if (!navCollapse || !toggler) return;
+
+    // Close on link click (mobile)
+    $$('#navbarNav .nav-link').forEach((link) => {
+      link.addEventListener('click', () => {
+        if (window.getComputedStyle(toggler).display !== 'none') {
+          const bsCollapse = bootstrap?.Collapse?.getOrCreateInstance(navCollapse, { toggle: false });
+          bsCollapse?.hide?.();
+        }
+      });
+    });
+  }
+
+  // Contact Form - EmailJS
+  function initContactForm() {
+    const contactForm = $('#contactForm');
+    const formMessage = $('#formMessage');
+
+    if (!contactForm || typeof emailjs === 'undefined') return;
+
+    emailjs.init({
+      publicKey: 'vjkoNskFp-A2p9Ayz'
+    });
+
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      formMessage.style.display = 'none';
+
+      try {
+        await emailjs.sendForm(
+          'service_vq9b9ej',
+          'template_mfaygyy',
+          contactForm
+        );
+
+        formMessage.textContent =
+          '✓ Your message has been sent successfully! Thank you for contacting me.';
+        formMessage.style.display = 'block';
+
+        contactForm.reset();
+
+        setTimeout(() => {
+          formMessage.style.display = 'none';
+        }, 5000);
+
+      } catch (error) {
+        console.error('EmailJS Error:', error);
+
+        formMessage.textContent =
+          '✕ Something went wrong. Please try again.';
+        formMessage.style.display = 'block';
+
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }
+    });
+  }
+
+  function init() {
+    // Theme
+    const savedTheme = localStorage.getItem(THEME_KEY) || 'dark';
+    setTheme(savedTheme);
+
+    // Lang
+    setLang(getLang());
+
+    // Controls (projects page uses different ids)
+    ($('#themeBtn') || $('#themeToggle'))?.addEventListener('click', toggleTheme);
+    ($('#langBtn') || $('#langToggle'))?.addEventListener('click', toggleLang);
+
+    // Effects
+    initReveal();
+    initBackToTop();
+    initNavbarAutoClose();
+    initContactForm();
+  }
+
+
+
+  // Ensure init even if something else fails
+  document.addEventListener('DOMContentLoaded', () => {
+    try {
+      init();
+    } catch (err) {
+      console.error('Init error:', err);
+      // Fail-safe: show content
+      document.body.classList.remove('js-reveal');
+    }
+  });
+})();
